@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel='stylesheet' href='https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css'>
+<script type='text/javascript' src="./js/nav_bar.js"></script>
+<script type='text/javascript' src="./js/footer_bar.js"></script>
+<script type='text/javascript' src="./js/faq.js"></script>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div id="header"></div>
+<h2>FAQ</h2>
+
+<button class="accordion">What we are ?</button>
+<div class="panel">
+  <p>Break The Silence is a platform for everyone who wants to speak their voices out or want legal advice in various situations. Using this platform we want to enourage the women around the world, to come forward and speak. We want you to know you are not alone in this, we can fight this. Before reaching the other side of this, it is important that you take the first step, and shatter the silence.</p>
+</div>
+
+<button class="accordion">What we do ?</button>
+<div class="panel">
+  <p>We are a group of young enthusiasts with knowledge of the constitution and ready to help people around the world who need us/</p>
+</div>
+
+<button class="accordion">Do I have to pay for leal advice ?</button>
+<div class="panel">
+  <p>No, you do not have to pay us anything.</p>
+</div>
+
+<button class="accordion">How to reach for help ?</button>
+<div class="panel">
+  <p>Just book an appointment and visit us or you can mail us in Contact section.</p>
+</div>
+
+<button class="accordion">How is my lawyer chosen ?</button>
+<div class="panel">
+  <p>According to the availabilty and knowledge we provide you our expert advice.</p>
+</div>
+
+<button class="accordion">Can I choose my legal assistance ?</button>
+<div class="panel">
+  <p>Yes you can definetly choose your legal advisors.</p>
+</div>
+
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}
+</script>
+
+	<div id="footer"></div>
+
+</body>
+</html>

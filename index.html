@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>A SOW Initiative : Shatter Silence</title>
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="style.css">
+<style>
+.slides {display:none;}
+</style>
+<script type='text/javascript' src='js/slideshow.js'></script>
+<script type='text/javascript' src="./js/nav_bar.js"></script>
+<script type='text/javascript' src="./js/footer_bar.js"></script>
+</head>
+<body>
+	<div class="main">
+		<div id="header"></div>
+	    <div class="slideshow_bar">
+	    	<img class="slides" src="./images/image01.jpg">
+	    	<img class="slides" src="./images/image_child01.jpeg">
+	    	<img class="slides" src="./images/image_lawer01.webp" >
+	    	<img class="slides" src="./images/image_women01.jpeg" >
+	    	<button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+	    	<button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+	    </div>
+	    <div class = "images">
+	    	<div class="mission_vision">
+	    		<img class = "mission_vision_img" src="./images/mis_n_vis.jpg">
+	    	</div>
+	    	<div class="overview">
+	    		<img class = "overview_img" src="./images/overview.jpg">
+	    	</div>
+	    </div>
+	</div>
+    <div id="footer"></div>
+<script>
+	var slideIndex = 1;
+	showDivs(slideIndex);
+
+	function plusDivs(n) {
+		showDivs(slideIndex += n);
+    }
+
+    function showDivs(n) {
+    	var i;
+    	var x = document.getElementsByClassName("slides");
+    	if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  x[slideIndex-1].style.display = "block";  
+}
+</script>
+</body>
+</html>
